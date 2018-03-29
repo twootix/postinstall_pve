@@ -13,8 +13,12 @@ echo ""
 ##mail de l'admin
 echo "Adresse mail de l'administrateur :"
 read adminmail
-adminmail=$adminmail
-
+#Test du mail
+str_mail="*@*.*"
+if [ "${adminmail/$str_mail}" = "$adminmail" ] ; then
+	echo $adminmail" n'est pas une mail valide"
+	exit 0
+fi
 ##proxy
 echo "Proxy Y/n"
 read reponse
