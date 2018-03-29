@@ -20,10 +20,10 @@ if [ "${adminmail/$str_mail}" = "$adminmail" ] ; then
 	exit 0
 fi
 ##proxy
-echo "Proxy Y/n"
+echo "Proxy Y/n :"
 read reponse
 
-if [ $reponse = "Y" ];
+if [ $proxy = " " ] || [ $proxy = "Y" ] || [ $proxy = "y" ] || [ $proxy = "yes" ] || [ $proxy = "oui" ] || [ $proxy = "O" ] || [ $proxy = "o" ];
 then
 echo "IP du Proxy"
 read proxy
@@ -151,8 +151,8 @@ echo -e "PROMPT_COMMAND='history -a >(logger -t \"\$USER[\$PWD] \$SSH_CONNECTION
 
 ##script Terminer
 echo -e '\033[1;33m Terminer, voulez-vous redémarer le serveur maintenant : Y/n \033[0m'
-read reponse
-if [ $reponse = "Y" ];
+read reboot
+if [ $reboot = " " ] || [ $reboot = "Y" ] || [ $reboot = "y" ] || [ $reboot = "yes" ] || [ $reboot = "oui" ] || [ $reboot = "O" ] || [ $reboot = "o" ];
 then
 echo "le serveur va redémarrer"
 shutdown -r now
