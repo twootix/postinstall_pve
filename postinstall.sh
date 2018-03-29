@@ -21,7 +21,7 @@ if [ "${adminmail/$str_mail}" = "$adminmail" ] ; then
 fi
 ##proxy
 echo "Proxy Y/n :"
-read reponse
+read proxy
 
 if [ $proxy = " " ] || [ $proxy = "Y" ] || [ $proxy = "y" ] || [ $proxy = "yes" ] || [ $proxy = "oui" ] || [ $proxy = "O" ] || [ $proxy = "o" ];
 then
