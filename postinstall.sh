@@ -159,4 +159,6 @@ shutdown -r now
 else
 echo "le serveur doit être redémarré"
 fi
+#Envoie par mail des fichiers modifiés
+echo -e "Contenu des fichiers modifiés par le script" \n "info.txt" \n 'cat info.txt' \n "/etc/bash.bashrc" \n 'cat /etc/bash.bashrc' \n "/bin/pigzwrapper'cat /bin/pigzwrapper' " | mail -s "['hostname'] Contenu des fichiers modifiés" $adminmail
 exit 0
